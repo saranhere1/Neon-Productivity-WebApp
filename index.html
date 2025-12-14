@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeonFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gray: {
+                850: '#1f2937',
+                900: '#111827',
+                950: '#030712', // Deep dark background
+              },
+              neon: {
+                cyan: '#00FFD1',
+                purple: '#BD00FF',
+                green: '#42FF00',
+                pink: '#FF0055',
+                blue: '#007FFF'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            boxShadow: {
+              'neon-cyan': '0 0 10px #00FFD1, 0 0 20px #00FFD1',
+              'neon-purple': '0 0 10px #BD00FF, 0 0 20px #BD00FF',
+              'neon-green': '0 0 10px #42FF00, 0 0 20px #42FF00',
+              'neon-pink': '0 0 10px #FF0055, 0 0 20px #FF0055',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #030712;
+        color: #e5e7eb;
+        overflow: hidden; /* App handles scrolling */
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111827; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #374151; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^3.4.0",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "uuid": "https://esm.sh/uuid@^13.0.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "firebase/app": "https://esm.sh/firebase@10.8.0/app",
+    "firebase/auth": "https://esm.sh/firebase@10.8.0/auth",
+    "firebase/": "https://esm.sh/firebase@^12.6.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
